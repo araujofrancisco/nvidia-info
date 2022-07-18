@@ -1,8 +1,8 @@
 #!/bin/bash
-mapfile -t miners < miners.txt
+mapfile -t client < clients.txt
 
-for miner in "${miners[@]}"
+for client in "${clients[@]}"
 do
-    result=$(ssh $miner 'nvidia-smi | grep -E "[0-9]C"' | grep -v 'Phone' 2>&1)
+    result=$(ssh $client 'nvidia-smi | grep -E "[0-9]C"' | grep -v 'Phone' 2>&1)
     echo -e "$miner -->\n$result"
 done
