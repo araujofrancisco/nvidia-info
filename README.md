@@ -5,10 +5,10 @@ This script requires ssh access on default port to the clients and each client n
 
 Example output for execution:
 
-fddev6 -->
-|100%   69C    P0    N/A /  52W |   3636MiB /  4096MiB |    100%      Default |
-fddev8 -->
-| 36%   57C    P2    59W / 102W |  11067MiB / 12288MiB |    100%      Default |
-af4coin1 -->
-| 85%   65C    P2   129W / 140W |   5364MiB /  8192MiB |    100%      Default |
-| 65%   58C    P2   122W / 140W |   5224MiB /  8192MiB |    100%      Default |
+fddev6 --></br>
+|100%   69C    P0    N/A /  52W |   3636MiB /  4096MiB |    100%      Default |</br>
+fddev8 --></br>
+| 36%   57C    P2    59W / 102W |  11067MiB / 12288MiB |    100%      Default |</br>
+af4coin1 --></br>
+| 85%   65C    P2   129W / 140W |   5364MiB /  8192MiB |    100%      Default |</br>
+| 65%   58C    P2   122W / 140W |   5224MiB /  8192MiB |    100%      Default |</br>
