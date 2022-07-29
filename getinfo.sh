@@ -1,5 +1,8 @@
 #!/bin/bash
-mapfile -t clients < clients.txt
+script=$(realpath "$0")
+scriptpath=$(dirname "$script")
+
+mapfile -t clients < $scriptpath/clients.txt
 
 showtitles="-B 5"
 for client in "${clients[@]}"
