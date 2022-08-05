@@ -7,10 +7,7 @@ usage: getinfo.sh [-h|--header]
 
 Example output for execution:
 
-fddev6 --></br>
-|100%   69C    P0    N/A /  52W |   3636MiB /  4096MiB |    100%      Default |</br>
-fddev8 --></br>
-| 36%   57C    P2    59W / 102W |  11067MiB / 12288MiB |    100%      Default |</br>
-af4coin1 --></br>
-| 85%   65C    P2   129W / 140W |   5364MiB /  8192MiB |    100%      Default |</br>
-| 65%   58C    P2   122W / 140W |   5224MiB /  8192MiB |    100%      Default |</br>
+fddev6 100% 68C P0 N/A / 52W  3929MiB / 4096MiB  100% Default</br>
+fddev8  36% 58C P2 101W / 102W  7245MiB / 12288MiB  100% Default</br>
+af4coin1  85% 66C P2 130W / 140W  5389MiB / 8192MiB  100% Default</br>
+af4coin1 65% 58C P2 121W / 140W  5256MiB / 8192MiB  100% Default</br>
