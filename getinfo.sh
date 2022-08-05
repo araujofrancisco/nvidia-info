@@ -44,6 +44,6 @@ do
         echo -e "$client -->\n$result"
     else
         res="$client $result"
-        { echo $res; } | sed "s/| |/\n$client/g" | sed "s/ |//g"
+        { echo $res; } | sed "s/| |/\n$client/g" | sed "s/|//g"
     fi
 done
