@@ -1,10 +1,14 @@
+import os
 import subprocess
 from datetime import datetime
 import sqlite3
 from nvidia_info import nvidia_info
 
+# get current path
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 # opens database connection, creates a new one if it does not exists
-conn = sqlite3.connect('nvidia_info.db')
+conn = sqlite3.connect(dir_path + '/nvidia_info.db')
 c = conn.cursor()
 
 # check if table does exists
@@ -15,27 +19,27 @@ if c.fetchone() is None:
     c.execute("""CREATE TABLE nvidia_info (
         client text,
         entry_date text,
-        fan_speed integer, 
+        fan_speed integer,
         temperature integer,
         power_used interger,
         power_limit integer,
         memory_used integer
-        )""")    
+        )""")
 
 # does insert a new row into nvidia_info table
 def insert_info(data):
     with conn:
-            c.execute("""INSERT INTO nvidia_info VALUES (:client, :entry_date, :fan_speed, 
-                      :temperature, :power_used, :power_limit, :memory_used)""", 
+            c.execute("""INSERT INTO nvidia_info VALUES (:client, :entry_date, :fan_speed,
+                      :temperature, :power_used, :power_limit, :memory_used)""",
                       {'client': data.client, 'entry_date': data.entry_date, 'fan_speed': data.fan_speed,
-                       'temperature': data.temperature, 'power_used': data.power_used, 
+                       'temperature': data.temperature, 'power_used': data.power_used,
                        'power_limit': data.power_limit, 'memory_used': data.memory_used})
 
 # get the values for all the clients
 #cmd = 'repos/nvidia-info/getinfo.sh | grep % | sed "s/|//g" | sed "s/\///g"'
 cmd = 'grep % | sed "s/|//g" | sed "s/\///g"'
 #result = subprocess.run(['ssh', 'fddev2', cmd], stdout=subprocess.PIPE)
-result = subprocess.run(['./getinfo.sh', cmd], stdout=subprocess.PIPE)
+result = subprocess.run([dir_path + '/getinfo.sh', cmd], stdout=subprocess.PIPE)
 
 # convert to string list and filters unwanted values
 str_list = result.stdout.decode('utf-8').split(" ")
