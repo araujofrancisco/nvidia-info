@@ -15,3 +15,5 @@ af4coin1 65% 58C P2 121W / 140W  5256MiB / 8192MiB  100% Default</br>
 The python program just calls the Bash script and save information to the database, creating it if it does not exists.
 
 usage: python3 update_db.py
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/araujofrancisco/nvidia-info)
