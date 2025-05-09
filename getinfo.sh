@@ -16,7 +16,7 @@ while [[ $# -gt 0 ]]; do
         shift # past argument
         shift # past valu
         ;;
-      --defailt)
+      --default)
         DEFAULT=YES
         shift # past argument
         ;;
